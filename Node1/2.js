@@ -1,8 +1,15 @@
-const moduloA = require('./moduloA')
-const moduloB = require('./moduloB')
+console.log(this === global)
+console.log(this === module)
 
-console.log(moduloA.ola)
-console.log(moduloA.bemVindo)
-console.log(moduloA.ateLogo)
-console.log(moduloA)
+console.log(this === module.exports)
+console.log(this === exports)
+
+function logThis(){
+    console.log('Dentro de uma função...')
+    console.log(this === exports)
+    console.log(this === module.exports)
+    console.log(this === global)
+}
+
+logthis()
 
