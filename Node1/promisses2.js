@@ -9,5 +9,11 @@ function funcionarOuNão(valor, chanceErro) {
 }
 
 funcionarOuNão('Testando...', 0.9)
-    .then(v => console.log(`Valor: ${v}`))
+    .then(v => `Valor: ${v}`)
+    .then(
+        v => consol.log(v),
+        err => console.log(`Erro Esp.: ${err}`)
+        
+    )
     .catch(err => console.log(`Erro: ${err}`))
+    .then(() => console.log('Fim!'))
